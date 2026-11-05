@@ -4,7 +4,7 @@ export default function Header({ links }: { links?: { label: string; url: string
   return (
     <header className="mx-auto flex max-w-6xl items-start justify-between gap-4 px-6 py-8">
       <HomeLink />
-      <nav aria-label="Main" className="ml-auto flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-sm">
+      <nav aria-label="Main" className="ml-auto flex flex-wrap items-center justify-end gap-x-7 gap-y-2 text-base font-medium sm:text-lg">
         {links?.map(l => (
           <a key={l.label + l.url} href={l.url}
             {...(l.url.startsWith('mailto:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
