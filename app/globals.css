@@ -1,0 +1,11 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { --bg:#f6f2ea; --fg:#1f1b16; --muted:#6b6358; --line:#ddd5c6; --accent:#8a4b2a; }
+.dark { --bg:#14120f; --fg:#ece6da; --muted:#a39a8b; --line:#2e2a24; --accent:#d29a72; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--fg); transition: background-color .3s, color .3s; overflow-x: hidden; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+.top-wash {
+    background-image: radial-gradient(75% 460px at 12% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent);
+    background-repeat: no-repeat;
+}
